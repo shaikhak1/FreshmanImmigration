@@ -1,0 +1,10 @@
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        numindex = {}
+        
+        for j, num in enumerate(nums):
+            c = target - num
+            
+            if c in numindex:
+                return [numindex[c], j]
+            
+            numindex[num] = j
